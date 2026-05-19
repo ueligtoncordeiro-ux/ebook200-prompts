@@ -683,8 +683,21 @@
     padding: 24px clamp(20px, 5vw, 72px);
   }
 
+  .login-link {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 6px;
+    padding: 6px 14px !important;
+    color: var(--text) !important;
+    font-size: 12px !important;
+  }
+  .login-link:hover { border-color: var(--green) !important; color: var(--green) !important; }
+  .already-member { margin-top: 1rem; font-size: 13px; color: var(--muted); }
+  .already-member a { color: var(--green); text-decoration: none; font-weight: 700; }
+  .already-member a:hover { text-decoration: underline; }
+
   @media (max-width: 920px) {
-    .nav-actions a:not(.buy-link) { display: none; }
+    .nav-actions a:not(.buy-link):not(.login-link) { display: none; }
     .hero {
       grid-template-columns: 1fr;
       padding-top: 104px;
@@ -737,6 +750,7 @@
       <a href="#conteudo">Conteúdo</a>
       <a href="#acesso">Acesso</a>
       <a class="buy-link" href="https://buy.stripe.com/8x23co3v6dX60pC6Wj28800">Comprar</a>
+      <a class="login-link" href="https://ebook-vault.ueligtoncordeiro.workers.dev/login">Já sou aluno</a>
     </div>
   </nav>
 
@@ -765,6 +779,9 @@
         <span>Checkout seguro via Stripe</span>
         <span>Acesso digital</span>
         <span>PDF incluso</span>
+      </div>
+      <div class="already-member">
+        Já adquiriu? <a href="https://ebook-vault.ueligtoncordeiro.workers.dev/login">Acesse sua área de membros →</a>
       </div>
     </div>
 
